@@ -1,0 +1,56 @@
+@import '~antd/dist/antd.css';
+
+#components-layout-demo-top-side-2 .logo {
+    width: 120px;
+    height: 31px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px 28px 16px 0;
+    float: left;
+  }
+  
+  .site-layout-background {
+    background: #fff;
+  }
+
+  .site-card-wrapper {
+    background: #ececec;
+    padding: 30px;
+  }
+
+  .ant-layout-header {
+    height: 64px;
+    padding: 0 0px;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 64px;
+    background: #001529;
+}
+
+  .ant-card-head{
+    color: #e6f7ff;
+    background: rgb(47, 68, 97);
+  }
+
+  .ant-card-body{
+    color: #e6f7ff;
+    background: #25354f;
+    font-weight: bold;
+  }
+
+  .ant-card-meta-detail > div:not(:last-child) {
+    margin-bottom: 8px;
+    color: #c7d7f1;
+  }
+
+  .ant-card-meta-description {
+    color: rgb(130, 133, 138);
+}
+  .switch{
+    margin-top: 20px;
+    min-width: 80%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  /* .body{
+      min-height: 500;
+  } */

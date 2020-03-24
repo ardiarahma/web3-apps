@@ -1,4 +1,4 @@
-import { Layout, Menu, Breadcrumb, Switch } from 'antd';
+import { Layout, Menu, Breadcrumb, Switch, Card } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 import React from 'react';
@@ -100,10 +100,25 @@ class Page extends React.Component{
                     }}
                     >
                     <div>
-                    <Photos/>
+                        <Photos/>
                     </div>
                     <div>
-                    <Cards/>
+                        <Card style={{marginTop: '24px'}}>
+                            <p
+                            style={{
+                                textAlign: "center",
+                                fontSize: "30px"
+                            }}
+                            >Please Vote Below for The Best Employee of the Year</p>
+                            <p
+                            style={{
+                                textAlign: "center",
+                                color: 'rgb(130, 133, 138)'
+                                
+                            }}
+                            >Voting is the expression of our commitment to ourselves and the future</p>
+                        </Card>
+                        <Cards/>
                     </div>
                     <div>
 

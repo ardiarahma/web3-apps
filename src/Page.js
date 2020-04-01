@@ -1,4 +1,4 @@
-import { Layout, Menu, Breadcrumb, Switch } from 'antd';
+import { Layout, Menu, Breadcrumb, Switch, Card } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 import React from 'react';
@@ -6,6 +6,8 @@ import './Page.css';
 import Cards from './Cards.js';
 import Photos from './Photos.js';
 import { Input } from 'antd';
+import Routing from './router/Router';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const { Search } = Input;
 const { SubMenu } = Menu;
@@ -49,8 +51,8 @@ class Page extends React.Component{
                     <Menu.Item key="0">
                         <img src={image}/>
                     </Menu.Item>
-                    <Menu.Item key="1">Home</Menu.Item>
-                    <Menu.Item key="2">Profile</Menu.Item>
+                    <Menu.Item key="1"><Link to='/'>Home</Link></Menu.Item>
+                    <Menu.Item key="2"><Link to='/profile-page'>Profile</Link></Menu.Item>
 
                     <Search
                         placeholder="Search"
@@ -79,42 +81,11 @@ class Page extends React.Component{
                         title={
                         <span>
                             <UserOutlined />
-                            Cards
+                            Dashboard
                         </span>
                         }
                     >
                         <Menu.Item key="1">option1</Menu.Item>
-                        <Menu.Item key="2">option2</Menu.Item>
-                        <Menu.Item key="3">option3</Menu.Item>
-                        <Menu.Item key="4">option4</Menu.Item>
-                    </SubMenu>
-                    <SubMenu
-                        key="sub2"
-                        title={
-                        <span>
-                            <LaptopOutlined />
-                            subnav 2
-                        </span>
-                        }
-                    >
-                        <Menu.Item key="5">option5</Menu.Item>
-                        <Menu.Item key="6">option6</Menu.Item>
-                        <Menu.Item key="7">option7</Menu.Item>
-                        <Menu.Item key="8">option8</Menu.Item>
-                    </SubMenu>
-                    <SubMenu
-                        key="sub3"
-                        title={
-                        <span>
-                            <NotificationOutlined />
-                            subnav 3
-                        </span>
-                        }
-                    >
-                        <Menu.Item key="9">option9</Menu.Item>
-                        <Menu.Item key="10">option10</Menu.Item>
-                        <Menu.Item key="11">option11</Menu.Item>
-                        <Menu.Item key="12">option12</Menu.Item>
                     </SubMenu>
                     </Menu>
                 </Sider>
@@ -131,10 +102,7 @@ class Page extends React.Component{
                     }}
                     >
                     <div>
-                    <Photos/>
-                    </div>
-                    <div>
-                    <Cards/>
+                        <Routing/>
                     </div>
                     <div>
 

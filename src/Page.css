@@ -51,6 +51,19 @@
     margin-right: 20px;
   }
 
+  .p{
+    text-align: center;
+  }
+
+  .likes{
+    position: relative;
+  }
+
+  .likes img{
+    width: 30px;
+    margin-bottom: 20px;
+  }
+
   /* .body{
       min-height: 500;
   } */

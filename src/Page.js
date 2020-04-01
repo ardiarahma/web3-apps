@@ -5,7 +5,9 @@ import React from 'react';
 import './Page.css';
 import Cards from './Cards.js';
 import Photos from './Photos.js';
+import Routing from '../src/router/router'
 import { Input } from 'antd';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const { Search } = Input;
 const { SubMenu } = Menu;
@@ -49,8 +51,8 @@ class Page extends React.Component{
                     <Menu.Item key="0">
                         <img src={image}/>
                     </Menu.Item>
-                    <Menu.Item key="1">Home</Menu.Item>
-                    <Menu.Item key="2">Profile</Menu.Item>
+                    <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
+                    <Menu.Item key="2"><Link to="/profile-page">Profile</Link></Menu.Item>
 
                     <Search
                         placeholder="Search"
@@ -83,7 +85,7 @@ class Page extends React.Component{
                         </span>
                         }
                     >
-                        <Menu.Item key="1">option1</Menu.Item>
+                        <Menu.Item key="1">Page Content</Menu.Item>
                     </SubMenu>
                     </Menu>
                 </Sider>
@@ -100,7 +102,8 @@ class Page extends React.Component{
                     }}
                     >
                     <div>
-                        <Photos/>
+                    <Routing/>
+                        {/* <Photos/>
                     </div>
                     <div>
                         <Card style={{marginTop: '24px'}}>
@@ -118,7 +121,7 @@ class Page extends React.Component{
                             }}
                             >Voting is the expression of our commitment to ourselves and the future</p>
                         </Card>
-                        <Cards/>
+                        <Cards/> */}
                     </div>
                     <div>
 

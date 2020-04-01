@@ -5,8 +5,8 @@ import React from 'react';
 import './Page.css';
 import Cards from './Cards.js';
 import Photos from './Photos.js';
-import Routing from '../src/router/router'
 import { Input } from 'antd';
+import Routing from './router/Router';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const { Search } = Input;
@@ -51,8 +51,8 @@ class Page extends React.Component{
                     <Menu.Item key="0">
                         <img src={image}/>
                     </Menu.Item>
-                    <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
-                    <Menu.Item key="2"><Link to="/profile-page">Profile</Link></Menu.Item>
+                    <Menu.Item key="1"><Link to='/'>Home</Link></Menu.Item>
+                    <Menu.Item key="2"><Link to='/profile-page'>Profile</Link></Menu.Item>
 
                     <Search
                         placeholder="Search"
@@ -85,7 +85,7 @@ class Page extends React.Component{
                         </span>
                         }
                     >
-                        <Menu.Item key="1">Page Content</Menu.Item>
+                        <Menu.Item key="1">option1</Menu.Item>
                     </SubMenu>
                     </Menu>
                 </Sider>
@@ -102,26 +102,7 @@ class Page extends React.Component{
                     }}
                     >
                     <div>
-                    <Routing/>
-                        {/* <Photos/>
-                    </div>
-                    <div>
-                        <Card style={{marginTop: '24px'}}>
-                            <p
-                            style={{
-                                textAlign: "center",
-                                fontSize: "30px"
-                            }}
-                            >Please Vote Below for The Best Employee of the Year</p>
-                            <p
-                            style={{
-                                textAlign: "center",
-                                color: 'rgb(130, 133, 138)'
-                                
-                            }}
-                            >Voting is the expression of our commitment to ourselves and the future</p>
-                        </Card>
-                        <Cards/> */}
+                        <Routing/>
                     </div>
                     <div>
 

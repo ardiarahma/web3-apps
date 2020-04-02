@@ -1,5 +1,5 @@
-import { Layout, Menu, Breadcrumb, Switch, Card } from 'antd';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import { Layout, Menu, Breadcrumb, Switch, Card} from 'antd';
+import { UserOutlined, HomeOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 import React from 'react';
 import './Page.css';
@@ -34,7 +34,7 @@ class Page extends React.Component{
   };
   
     render(){
-        const image = require('./assets/badge-logohdpi.png')
+        const image = require('./assets/badge-logohdpi_long.png')
         return(
             <Layout className="body" style={{minHeight:500}}>
                 <Header className="header">
@@ -48,16 +48,16 @@ class Page extends React.Component{
                     defaultSelectedKeys={['1']}
                     style={{ lineHeight: '64px' }}
                 >
-                    <Menu.Item key="0">
+                    <Menu.Item key="0"><Link to='/'></Link>
                         <img src={image}/>
                     </Menu.Item>
-                    <Menu.Item key="1"><Link to='/'>Home</Link></Menu.Item>
-                    <Menu.Item key="2"><Link to='/profile-page'>Profile</Link></Menu.Item>
+                    {/* <Menu.Item key="1"><Link to='/'>Home</Link></Menu.Item>
+                    <Menu.Item key="2"><Link to='/profile-page'>Profile</Link></Menu.Item> */}
 
                     <Search
                         placeholder="Search"
                         onSearch={value => console.log(value)}
-                        style={{ marginLeft: '850px',width: 200 }}/>
+                        style={{ marginLeft: '960px',width: 200 }}/>
                 </Menu>
                 </Header>
                 <Layout>
@@ -76,7 +76,10 @@ class Page extends React.Component{
                         unCheckedChildren="Light"/>
                     <br />
                     <br />
-                    <SubMenu
+                    <Menu.Item><HomeOutlined/><Link to='/'>Dashboard</Link></Menu.Item>
+                    <Menu.Item><UserOutlined/><Link to='/profile-page'>About Me</Link></Menu.Item>
+
+                    {/* <SubMenu
                         key="sub1"
                         title={
                         <span>
@@ -85,20 +88,20 @@ class Page extends React.Component{
                         </span>
                         }
                     >
-                        <Menu.Item key="1">option1</Menu.Item>
-                    </SubMenu>
+                    </SubMenu> */}
                     </Menu>
                 </Sider>
                 <Layout style={{ padding: '0 24px 24px' }}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
+                    {/* <Breadcrumb style={{ margin: '16px 0' }}>
                     <Breadcrumb.Item>Home</Breadcrumb.Item>
-                    </Breadcrumb>
+                    </Breadcrumb> */}
                     <Content
                     className="site-layout-background"
                     style={{
                         padding: 24,
                         margin: 0,
                         minHeight: 500,
+                        marginTop: 24
                     }}
                     >
                     <div>
